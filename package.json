@@ -1,0 +1,14 @@
+{
+  "name": "family-pics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dutzi <dutzi@wix.com> (http://github.com/dutzi)",
+  "license": "ISC",
+  "dependencies": {
+    "get-canvas-pixel-color": "^1.0.0"
+  }
+}
