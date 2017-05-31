@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+"scripts": {
+    "serve": "python -m SimpleHTTPServer",
+    "watch": "watchify main.js -o static/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dutzi <dutzi@wix.com> (http://github.com/dutzi)",
   "license": "ISC",
   "dependencies": {
-    "get-canvas-pixel-color": "^1.0.0"
+    "get-canvas-pixel-color": "^1.0.0",
+    "watchify": "^3.9.0"
   }
 }
