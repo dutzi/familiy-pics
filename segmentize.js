@@ -65,7 +65,10 @@ function onCanvasMouseMove(e) {
         y = e.offsetY,
         row = getRowAtScaledX(x, canvas),
         column = getColumnAtScaledY(y, canvas),
-        color = getColorAtScaledBlock(x, y, canvas);
+        color = getColorAtScaledBlock(x, y, canvas),
+        firstColor = getColorAtBlock(0, 0, canvas),
+        colorDist = calcColorDistance(firstColor, color);
+
 
     let tooltipData = $('.tooltip__data');
     tooltipData.innerHTML =
@@ -73,6 +76,7 @@ function onCanvasMouseMove(e) {
         `<div><b>y:</b> ${y}</div>` +
         `<div><b>row:</b> ${row}</div>` +
         `<div><b>column:</b> ${column}</div>` +
+        `<div><b>dist:</b> ${colorDist.toFixed(2)}</div>` +
         `<div><b>color:</b> ${stringifyColor(color)}</div>`;
 
     let tooltipColor = $('.tooltip__color');
