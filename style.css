@@ -1,5 +1,11 @@
 :root {
-  --crop-offset: 10px;
+  --crop-offset: 30px;
+  --crop-width: 30px;
+  --crop-alpha: 0.5;
+}
+
+body {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .container {
@@ -7,22 +13,48 @@
 }
 
 .container .scannedImage {
-    width: 100%;
+    /*width: 100%;*/
+    /*position: absolute;*/
+    display: none;
 }
 
 .container .imgCanvas {
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none;
+    /*pointer-events: none;*/
     width: 100%;
 }
 
 .container .cropArea {
-    background: rgba(0,0,0,0.4);
     position: absolute;
     top: var(--crop-offset);
     left: var(--crop-offset);
     bottom: var(--crop-offset);
     right: var(--crop-offset);
+    outline: solid black;
+    outline-width: var(--crop-width);
+    opacity: var(--crop-alpha);
+    pointer-events: none;
+
+    display: none;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 6px 10px;
+    font-size: 0.9em;
+    pointer-events: none;
+    z-index: 1;
+    color: white;
+}
+
+.tooltip__color {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background: pink;
 }
